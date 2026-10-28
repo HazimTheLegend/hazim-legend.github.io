@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAZIM IS THE LEGEND</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #08080d;
+    color: #f8f0dc;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 25px 15px;
+    text-align: center;
+    background: linear-gradient(120deg, #090909, #211500, #090909);
+    border-bottom: 2px solid gold;
+}
+
+header h1 {
+    color: gold;
+    font-size: clamp(30px, 6vw, 55px);
+    text-shadow: 0 0 18px #c99100;
+    animation: glow 2s infinite alternate;
+}
+
+header p {
+    margin-top: 12px;
+    color: #ddd;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px;
+    background: #101015;
+    border-bottom: 1px solid #806300;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background: #493800;
+    color: white;
+}
+
+.hero {
+    min-height: 330px;
+    padding: 70px 20px;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, #342500 0%, #101016 50%, #08080d 100%);
+}
+
+.hero h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    color: gold;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 5px;
+    background: linear-gradient(135deg, #ffd700, #b8860b);
+    color: #15100a;
+    border: none;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 0 20px #d9a900;
+}
+
+section {
+    padding: 45px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    color: gold;
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 12px;
+}
+
+.section-description {
+    text-align: center;
+    color: #bbb;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #1a1a22, #111115);
+    border: 1px solid #65501a;
+    border-radius: 15px;
+    padding: 23px;
+    text-align: center;
+    transition: transform 0.25s, border-color 0.25s;
+    animation: appear 0.7s ease both;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: gold;
+}
+
+.movie-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px #b58b00);
+}
+
+.card h3 {
+    color: gold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.card p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.year {
+    color: #e9cb72 !important;
+    font-weight: bold;
+}
+
+.game-card {
+    background: linear-gradient(145deg, #171717, #241b06);
+}
+
+.magic {
+    text-align: center;
+    font-size: 24px;
+    line-height: 2;
+    color: #e9cb72;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #101015;
+    border-top: 1px solid #806300;
+    color: #bbb;
+    line-height: 1.8;
+}
+
+footer strong {
+    color: gold;
+}
+
+#spellButton {
+    margin-top: 15px;
+}
+
+.spark {
+    position: fixed;
+    bottom: -20px;
+    color: gold;
+    pointer-events: none;
+    z-index: 20;
+    animation: rise linear forwards;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 8px #9e7900; }
+    to { text-shadow: 0 0 25px gold, 0 0 40px #9e7900; }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚡ HAZIM IS THE LEGEND ⚡</h1>
+    <p>Gaming • Magic • Movies • Epic Adventures</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#movies">Harry Potter</a>
+    <a href="#games">Games</a>
+    <a href="#magic">Magic Zone</a>
+</nav>
+
+<div class="hero" id="home">
+    <h2>Welcome to My Kingdom 🏰</h2>
+    <p>
+        Enter a world of legendary games, powerful spells,
+        magical adventures and unforgettable movies.
+        This is the ultimate zone for legends!
+    </p>
+    <a class="button" href="#movies">🪄 Explore Harry Potter</a>
+    <a class="button" href="#games">🎮 Play Games</a>
+</div>
+
+<section id="movies">
+    <h2 class="section-title">⚡ The Harry Potter Collection ⚡</h2>
+    <p class="section-description">
+        Discover all eight movies from the legendary wizarding saga.
+        Select a movie to find legal viewing or rental options.
+    </p>
+
+    <div class="grid">
+
+        <article class="card">
+            <div class="movie-icon">🪄</div>
+            <h3>1. Harry Potter and the Philosopher's Stone</h3>
+            <p class="year">2001</p>
+            <p>A young wizard discovers Hogwarts and his magical destiny.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://www.justwatch.com/search?q=Harry%20Potter%20and%20the%20Philosopher%27s%20Stone">
+               Find Movie
+            </a>
+        </article>
+
+        <article class="card">
+            <div class="movie-icon">🐍</div>
+            <h3>2. Harry Potter and the Chamber of Secrets</h3>
+            <p class="year">2002</p>
+            <p>A mysterious chamber opens, putting Hogwarts in danger.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://www.justwatch.com/search?q=Harry%20Potter%20and%20the%20Chamber%20of%20Secrets">
+               Find Movie
+            </a>
+        </article>
+
+        <article class="card">
+            <div class="movie-icon">🐺</div>
+            <h3>3. Harry Potter and the Prisoner of Azkaban</h3>
+            <p class="year">2004</p>
+            <p>Harry learns secrets about a dangerous escaped prisoner.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://www.justwatch.com/search?q=Harry%20Potter%20and%20the%20Prisoner%20of%20Azkaban">
+               Find Movie
+            </a>
+        </article>
+
+        <article class="card">
+            <div class="movie-icon">🏆</div>
+            <h3>4. Harry Potter and the Goblet of Fire</h3>
+            <p class="year">2005</p>
+            <p>Harry enters a dangerous magical tournament.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://www.justwatch.com/search?q=Harry%20Potter%20and%20the%20Goblet%20of%20Fire">
+               Find Movie
+            </a>
+        </article>
+
+        <article class="card">
+            <div class="movie-icon">🔥</div>
+            <h3>5. Harry Potter and the Order of the Phoenix</h3>
+            <p class="year">2007</p>
+            <p>Harry and his friends prepare to face a growing threat.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://www.justwatch.com/search?q=Harry%20Potter%20and%20the%20Order%20of%20the%20Phoenix">
+               Find Movie
+            </a>
+        </article>
+
+        <article class="card">
+            <div class="movie-icon">🧪</div>
+            <h3>6. Harry Potter and the Half-Blood Prince</h3>
+            <p class="year">2009</p>
+            <p>Harry uncovers secrets about Voldemort's past.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://www.justwatch.com/search?q=Harry%20Potter%20and%20the%20Half-Blood%20Prince">
+               Find Movie
+            </a>
+        </article>
+
+        <article class="card">
+            <div class="movie-icon">🕯️</div>
+            <h3>7. Harry Potter and the Deathly Hallows – Part 1</h3>
+            <p class="year">2010</p>
+            <p>Harry, Ron and Hermione search for the Horcruxes.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://www.justwatch.com/search?q=Harry%20Potter%20and%20the%20Deathly%20Hallows%20Part%201">
+               Find Movie
+            </a>
+        </article>
+
+        <article class="card">
+            <div class="movie-icon">⚡</div>
+            <h3>8. Harry Potter and the Deathly Hallows – Part 2</h3>
+            <p class="year">2011</p>
+            <p>The final battle for the wizarding world begins.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://www.justwatch.com/search?q=Harry%20Potter%20and%20the%20Deathly%20Hallows%20Part%202">
+               Find Movie
+            </a>
+        </article>
+
+    </div>
+
+    <p class="section-description" style="margin-top:25px">
+        Viewing options depend on your country and may require payment.
+        This website does not contain the movie files.
+    </p>
+</section>
+
+<section id="games">
+    <h2 class="section-title">🎮 Legendary Browser Games 🎮</h2>
+    <p class="section-description">
+        Click a game to visit its website. Some games may have ads
+        or require a compatible browser.
+    </p>
+
+    <div class="grid">
+
+        <article class="card game-card">
+            <div class="movie-icon">🧱</div>
+            <h3>Bloxd.io</h3>
+            <p>Explore worlds and play block-style multiplayer games.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://bloxd.io/">Play Now</a>
+        </article>
+
+        <article class="card game-card">
+            <div class="movie-icon">🏎️</div>
+            <h3>Smash Karts</h3>
+            <p>Race around arenas and battle in kart competitions.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://smashkarts.io/">Play Now</a>
+        </article>
+
+        <article class="card game-card">
+            <div class="movie-icon">🐍</div>
+            <h3>Slither.io</h3>
+            <p>Grow your snake and compete against other players.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://slither.io/">Play Now</a>
+        </article>
+
+        <article class="card game-card">
+            <div class="movie-icon">🔫</div>
+            <h3>Krunker</h3>
+            <p>Try a fast-paced browser-based multiplayer shooter.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://krunker.io/">Visit Game</a>
+        </article>
+
+        <article class="card game-card">
+            <div class="movie-icon">🥚</div>
+            <h3>Shell Shockers</h3>
+            <p>Jump into a silly egg-themed multiplayer shooter.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://shellshock.io/">Play Now</a>
+        </article>
+
+        <article class="card game-card">
+            <div class="movie-icon">🕹️</div>
+            <h3>Poki</h3>
+            <p>Explore a large collection of free browser games.</p>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://poki.com/">Explore Games</a>
+        </article>
+
+    </div>
+</section>
+
+<section id="magic">
+    <h2 class="section-title">✨ The Magic Zone ✨</h2>
+    <p class="section-description">
+        Ready to cast a spell? Try your magical powers!
+    </p>
+
+    <div class="card">
+        <div class="magic" id="spellText">🪄 Choose your spell!</div>
+        <button class="button" id="spellButton" type="button"
+                onclick="castSpell()">CAST A SPELL</button>
+    </div>
+</section>
+
+<footer>
+    <p><strong>⚡ HAZIM IS THE LEGEND ⚡</strong></p>
+    <p>Made for gaming, magic and movie adventures.</p>
+    <p>Harry Potter is the property of its respective rights holders.
+       This is a fan-made website and is not officially affiliated
+       with the franchise.</p>
+</footer>
+
+<script>
+const spells = [
+    "✨ Lumos! Your magical light shines bright!",
+    "🪄 Expelliarmus! What a powerful spell!",
+    "⚡ Expecto Patronum! A guardian appears!",
+    "🌟 Wingardium Leviosa! Things are floating!",
+    "🔥 Incendio! A magical flame appears!",
+    "🏰 Welcome to Hogwarts, young wizard!"
+];
+
+function castSpell() {
+    const spellText = document.getElementById("spellText");
+    const randomIndex = Math.floor(Math.random() * spells.length);
+    spellText.textContent = spells[randomIndex];
+
+    for (let i = 0; i < 12; i++) {
+        createSpark();
+    }
+}
+
+function createSpark() {
+    const spark = document.createElement("div");
+    spark.className = "spark";
+    spark.textContent = Math.random() > 0.5 ? "✦" : "✨";
+    spark.style.left = Math.random() * 100 + "vw";
+    spark.style.fontSize = (12 + Math.random() * 18) + "px";
+    spark.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(spark);
+    spark.addEventListener("animationend", () => spark.remove());
+}
+
+setInterval(createSpark, 1000);
+</script>
+
+</body>
+</html>
